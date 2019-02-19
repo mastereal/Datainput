@@ -63,17 +63,22 @@ for pro in list(pop_data.columns.str.strip()):
     pop_data[pro]=pop_data[pro].interpolate(method="linear")
 for pro in list(farm_data.columns.str.strip()):
     farm_data[pro]=farm_data[pro].interpolate(method="linear")
-pop_data.to_excel("pro_pop.xlsx")
-farm_data.to_excel("pro_farm.xlsx")
+#pop_data.to_excel("pro_pop.xlsx")
+#farm_data.to_excel("pro_farm.xlsx")
 #pop_df=pd.read_excel("pro_pop.xlsx",header=0,sheet_name=0,index_col=0) # Need edit
 #farm_df=pd.read_excel("pro_farm.xlsx",header=0,sheet_name=0,index_col=0)
 #pn(pop_df,"Population","./Propanelise/")
 #pn(farm_df,"Farmland","./Propanelise/")
-tax_food=pd.read_excel("po-fa.xlsx",header=0,sheet_name="AgricultureTax_food",index_col=0)
-tax_currency=pd.read_excel("po-fa.xlsx",header=0,sheet_name="AgricultureTax",index_col=0)
-for pro in list(tax_food.columns.str.strip()):  
-    tax_food[pro]=tax_food[pro].interpolate(method="linear")
-for pro in list(tax_currency.columns.str.strip()):
-    tax_currency[pro]=tax_currency[pro].interpolate(method="linear")
-tax_food.to_excel("pro_taxf.xlsx")
-tax_currency.to_excel("pro_taxc.xlsx")
+#tax_food=pd.read_excel("po-fa.xlsx",header=0,sheet_name="AgricultureTax_food",index_col=0)
+#tax_currency=pd.read_excel("po-fa.xlsx",header=0,sheet_name="AgricultureTax",index_col=0)
+#for pro in list(tax_food.columns.str.strip()):  
+    #tax_food[pro]=tax_food[pro].interpolate(method="linear")
+#for pro in list(tax_currency.columns.str.strip()):
+    #tax_currency[pro]=tax_currency[pro].interpolate(method="linear")
+#tax_food.to_excel("pro_taxf.xlsx")
+#tax_currency.to_excel("pro_taxc.xlsx")
+#tax=pd.read_excel("pro_taxc.xlsx",header=0,sheet_name=2,index_col=0)
+#pn(tax,"AgricultureTax","./Propanelise/")
+
+utor=pd.read_excel("pro_utor_af.xlsx",header=0,sheet_name=1,index_col=0)
+pn(utor,"UrbantoRural","./Propanelise/")

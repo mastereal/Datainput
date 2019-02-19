@@ -39,4 +39,4 @@
 						<option value="WC">青稞</option>
 						<option value="WR">紅麥</option>
 						<option value="WT">燕麥、莜麥、油麥</option>
-						<option value="WW">
+						<option value="WW">白麥</option>
